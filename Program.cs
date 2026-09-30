@@ -12,7 +12,7 @@ class Program
         Console.WriteLine("Välkommen till Johans bank");
 
         Console.WriteLine("Skriv in en summa pengar i SEK");
-        decimal number = decimal.Parse(Console.ReadLine()!);
+        decimal ValdvalutaiSEK = decimal.Parse(Console.ReadLine()!);
 
 // Ange en lista över tillgängliga valutor (t.ex. EUR, GBP, JPY,USD).
         List<string> valutor = new List<string> { "EUR", "GBP", "JPY", "USD", "CZK"};
@@ -26,19 +26,19 @@ class Program
         switch (valuta)
         {
             case "EUR":
-                omvandlatBelopp = number * 0.092m;
+                omvandlatBelopp = ValdvalutaiSEK * 0.092m;
                 break;
             case "GBP":
-                omvandlatBelopp = number * 0.079m;
+                omvandlatBelopp = ValdvalutaiSEK * 0.079m;
                 break;
             case "JPY":
-                omvandlatBelopp = number * 15.7m;
+                omvandlatBelopp = ValdvalutaiSEK * 15.7m;
                 break;
             case "USD":
-                omvandlatBelopp = number * 0.099m;
+                omvandlatBelopp = ValdvalutaiSEK * 0.099m;
                 break;
             case "CZK":
-                omvandlatBelopp = number * 2.18m;
+                omvandlatBelopp = ValdvalutaiSEK * 2.18m;
                 break;    
 
             default:
@@ -49,7 +49,7 @@ class Program
         
 // Utför omvandlingen med multiplikationsoperatorer och skriv gjutning vid behov.
 // Visa det konverterade beloppet.
-        Console.WriteLine($"{number} SEK = {omvandlatBelopp:F2} {valuta}");
+        Console.WriteLine($"{ValdvalutaiSEK} SEK = {omvandlatBelopp:F2} {valuta}");
 
 
         Console.ReadLine();
